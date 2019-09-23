@@ -5,8 +5,11 @@ package _01_Custom_ArrayList;
 public class ArrayList <T>{
 	
 	public ArrayList() {
+		arr = (T[]) new Object[0];
 	}
 	
+	T[] arr;
+	int[] array = new array[];
 	public T get(int loc) throws IndexOutOfBoundsException {
 		
 		return null;

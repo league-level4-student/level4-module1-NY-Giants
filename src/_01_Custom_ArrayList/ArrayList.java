@@ -9,10 +9,10 @@ public class ArrayList <T>{
 	}
 	
 	T[] arr;
-	int[] array = new array[];
+	int[] array = new int[0];
 	public T get(int loc) throws IndexOutOfBoundsException {
-		
-		return null;
+		if(loc < 0 || loc > arr.length) throw new IndexOutOfBoundsException();
+		return arr[loc];
 	}
 	
 	public void add(T val) {
@@ -34,5 +34,10 @@ public class ArrayList <T>{
 	public boolean contains(T val) {
 		
 		return false;
+	}
+
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

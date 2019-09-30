@@ -16,10 +16,21 @@ public class ArrayList <T>{
 	}
 	
 	public void add(T val) {
-		
+		T[] add1 = (T[])new Object[arr.length+1];
+		for(int i = 0; i < arr.length; i++) {
+			add1[i] = arr[i];
+		}
+		add1[arr.length] = val;
+		arr = add1;
 	}
 	
 	public void insert(int loc, T val) throws IndexOutOfBoundsException {
+		if(loc < 0 || loc > arr.length) throw new IndexOutOfBoundsException();
+		T[] ins = (T[])new Object[arr.length+1];
+		
+		for(int i = 0; i < arr.length; i++) {
+			
+		}
 		
 	}
 	

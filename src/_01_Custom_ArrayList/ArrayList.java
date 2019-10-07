@@ -9,7 +9,7 @@ public class ArrayList <T>{
 	}
 	
 	T[] arr;
-	int[] array = new int[0];
+	
 	public T get(int loc) throws IndexOutOfBoundsException {
 		if(loc < 0 || loc > arr.length) throw new IndexOutOfBoundsException();
 		return arr[loc];
@@ -26,25 +26,66 @@ public class ArrayList <T>{
 	
 	public void insert(int loc, T val) throws IndexOutOfBoundsException {
 		if(loc < 0 || loc > arr.length) throw new IndexOutOfBoundsException();
+		
 		T[] ins = (T[])new Object[arr.length+1];
 		
-		for(int i = 0; i < arr.length; i++) {
+		
+		
+		for(int i = 0; i < ins.length; i++) {
+			if(i < loc) {
+				ins[i] = arr[i];
+			}
+			else if(i == loc) {
+				ins[i] = val;
+			}
+			else {
+				ins[i] = arr[i-1];
+			}
 			
 		}
-		
+		arr = ins;
 	}
 	
 	public void set(int loc, T val) throws IndexOutOfBoundsException {
+		if(loc < 0 || loc > arr.length) throw new IndexOutOfBoundsException();
 		
+		for(int i = 0; i < arr.length; i++) {
+			if(i == loc) {
+				arr[i] = val;
+			}
+		}
 	}
 	
 	public void remove(int loc) throws IndexOutOfBoundsException {
+		if(loc < 0 || loc > arr.length) throw new IndexOutOfBoundsException();
 		
+		T[] rem = (T[])new Object[arr.length-1];
+		
+		
+		
+		for(int i = 0; i < arr.length; i++) {
+			if(i < loc) {
+				rem[i] = arr[i];
+			}
+			else if(i == loc) {
+				
+			}
+			else {
+				rem[i-1] = arr[i];
+			}
+			
+		}
+		arr = rem;
 	}
 	
 	public boolean contains(T val) {
-		
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i] == val) {
+				return true;
+			}
+		}
 		return false;
+		
 	}
 
 	public int size() {

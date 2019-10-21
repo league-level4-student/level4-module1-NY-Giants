@@ -85,8 +85,26 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		//2. Use a switch statement to determine which difficulty was chosen.
 		//   Use timer.setDelay(delay) with different numbers to change the speed
 		//   of the game. The smaller the number, the faster it goes.
-
+		switch(input) {
+		case 0: 
+			System.out.println(choice);
+			timer.setDelay(5);
+			break;
+		case 1: 
+			System.out.println(choice);
+			timer.setDelay(10);
+			break;
+		case 2: 
+			System.out.println(choice);
+			timer.setDelay(15);
+			break;
+		default: 
+			System.out.println("Something went wrong :(");
+			break;
+		}
+		
 		//3. start the timer
+		timer.start();
 	}
 
 	public static void main(String[] args) {
@@ -120,7 +138,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 	}
 
 	private void gameOver() {
-		
+		timer.stop();
 		//1. stop the timer
 		
 		//2. tell the user their snake is dead

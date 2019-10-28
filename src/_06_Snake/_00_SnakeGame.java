@@ -158,8 +158,8 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		// on the snake
 		foodLocation = loc;
 		
-		if(snake.isLocationOnSnake(loc)) {
-			
+		while(snake.isLocationOnSnake(loc)) {
+			loc = new Location(rand.nextInt(_00_SnakeGame.WIDTH),rand.nextInt(_00_SnakeGame.WIDTH));
 		}
 
 	}

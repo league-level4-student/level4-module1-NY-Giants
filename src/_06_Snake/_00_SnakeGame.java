@@ -88,15 +88,15 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		switch (input) {
 		case 0:
 			System.out.println(choice);
-			timer.setDelay(5);
+			timer.setDelay(100);
 			break;
 		case 1:
 			System.out.println(choice);
-			timer.setDelay(10);
+			timer.setDelay(250);
 			break;
 		case 2:
 			System.out.println(choice);
-			timer.setDelay(15);
+			timer.setDelay(500);
 			break;
 		default:
 			System.out.println("Something went wrong :(");

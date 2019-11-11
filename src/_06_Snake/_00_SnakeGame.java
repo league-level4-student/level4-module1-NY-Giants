@@ -151,7 +151,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 	private void setFoodLocation() {
 		// 1. Create a new Location object that is set to a random location
 		Random rand = new Random();
-		Location loc = new Location(rand.nextInt(_00_SnakeGame.WIDTH),rand.nextInt(_00_SnakeGame.WIDTH));
+		Location loc = new Location(rand.nextInt(_00_SnakeGame.WIDTH),rand.nextInt(_00_SnakeGame.HEIGHT));
 		// 2. set the foodLocation variable equal to the Location object you just
 		// created.
 		// use the snake's isLocationOnSnake method to make sure you don't put the food
@@ -159,7 +159,7 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 		foodLocation = loc;
 		
 		while(snake.isLocationOnSnake(loc)) {
-			loc = new Location(rand.nextInt(_00_SnakeGame.WIDTH),rand.nextInt(_00_SnakeGame.WIDTH));
+			loc = new Location(rand.nextInt(_00_SnakeGame.WIDTH),rand.nextInt(_00_SnakeGame.HEIGHT));
 		}
 
 	}

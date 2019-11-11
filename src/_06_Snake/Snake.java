@@ -110,14 +110,14 @@ public class Snake {
 		if(head.getLocation().x < 0) {
 			return true;
 		}
-		else if(head.getLocation().x > 15) {
+		else if(head.getLocation().x >= _00_SnakeGame.WIDTH) {
 			System.out.println("hi");
 			return true;
 		}
 		else if(head.getLocation().y < 0) {
 			return true;
 		}
-		else if(head.getLocation().x > 12) {
+		else if(head.getLocation().y >= _00_SnakeGame.HEIGHT) {
 			return true;
 		}
 		else {
